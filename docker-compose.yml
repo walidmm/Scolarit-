@@ -1,0 +1,56 @@
+version: '3'
+
+
+networks:
+
+
+
+
+  laravel:
+
+
+ services:
+  nginx:
+    image: nginx:stable-alpine
+    container_name: nginx
+    ports:
+      - "8088:80"
+    volumes:
+    depends_on:
+      - php
+      - mysql
+
+    networks:
+      - laravel
+
+
+
+
+  mysql:
+
+    image: mysql:5.7.22
+    container_name: mysql
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "4306:3306"
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: tutoreact
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 19991999
+      MYSQL_ROOT_PASSWORD: 19991999
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+      
+
+    networks:
+      - laravel
+
+
+
+  php:
+    networks:
+      - laravel
+    
