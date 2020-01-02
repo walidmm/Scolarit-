@@ -1,0 +1,390 @@
+body {
+  margin: 0;
+
+}
+
+.ulbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+background-image: linear-gradient(to top, #b3ffab 0%, #12fff7 100%);
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.ulbar li {
+  display: block;
+  color: #b3ffab;
+  padding: 20px 40px;
+  text-decoration: none;
+}
+
+.activelink {
+  background-color: red;
+  color: white;
+}
+
+
+.divclass2{
+   list-style-type: unset;
+
+  margin: unset;
+  width: 100%;
+  height: 100%;
+  background-color: unset;
+  position: unset;
+  overflow: unset;
+
+margin-left:25%;
+position: fixed;
+ 
+background-image: linear-gradient(to top, #b3ffab 0%, #12fff7 100%);
+}
+
+.divclass{
+
+
+
+  list-style-type: unset;
+
+  margin: unset;
+  width: unset;
+  background-color: unset;
+  position: unset;
+  overflow: unset;
+
+margin-left:30%;
+padding:1px 16px;
+
+
+position: fixed;
+  top: 20%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
+
+
+}
+
+.textform{
+  color:black;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+
+
+.form {font-family: Arial, Helvetica, sans-serif;}
+.form {border: 3px solid #f1f1f1;}
+.form label{
+  color:black;
+  font-weight: bold;
+  font-family: cursive;
+}
+.form input[type=text], input[type=password],input[type=checkbox] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.busubmit{
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+ margin: 8px 0;
+  border: none;
+  cursor: pointer;
+ 
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+.list-type3{
+margin:0 auto;
+background-color: unset;
+
+ position: fixed;
+  top: 30%;
+  left: 60%;
+  margin-top: -50px;
+  margin-left: -100px;
+
+}
+.list-type3 span,link {
+ 
+float:left;
+
+position:relative;
+font-size:25px;
+margin-bottom: 12px;
+font-family: 'Raleway', sans-serif;
+
+
+}
+.list-type3 span{
+padding:0 60px 0 12px;
+
+text-decoration:none;
+-moz-border-radius-bottomright:4px;
+-webkit-border-bottom-right-radius:4px;
+border-bottom-right-radius:4px;
+-moz-border-radius-topright:4px;
+-webkit-border-top-right-radius:4px;
+border-top-right-radius:4px;
+
+
+
+display: unset;
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+
+}
+
+
+
+.list-type3 span:hover{
+
+
+
+}
+
+
+@keyframes animation {
+
+
+  from {
+    letter-spacing: -10px;
+   /* transform: translate(-150px, -50px) rotate(-180deg) */
+  }
+  to {
+    letter-spacing:10px;
+  }
+}
+.animated {
+  animation: animation 5s ease infinite;
+ color:black;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+
+
+
+
+
+
+
+
+.rwd-table {
+  margin: 1em 0;
+  min-width: 300px;
+  
+  tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    display: none; 
+  }
+  
+  td {
+    display: block; 
+    
+    &:first-child {
+      padding-top: .5em;
+    }
+    &:last-child {
+      padding-bottom: .5em;
+    }
+
+    &:before {
+      content: attr(data-th)": "; 
+      font-weight: bold;
+
+
+      width: 6.5em; 
+      display: inline-block;
+  
+      
+      @media (min-width: $breakpoint-alpha) {
+        display: none;
+      }
+    }
+  }
+  
+  th, td {
+    text-align: left;
+    
+    @media (min-width: $breakpoint-alpha) {
+      display: table-cell;
+      padding: .25em .5em;
+      
+      &:first-child {
+        padding-left: 0;
+      }
+      
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+  }
+  
+  
+}
+
+
+
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
+
+.divtable {
+  padding: 0 2em;
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #444;
+  background: unset;
+
+
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
+}
+
+.divtable.h1 {
+
+
+
+  font-weight: normal;
+  letter-spacing: -1px;
+  color: #34495E;
+}
+
+.rwd-table {
+  background: #34495E;
+  color: #fff;
+  border-radius: .4em;
+  overflow: hidden;
+  tr {
+    border-color: lighten(#34495E, 10%);
+  }
+  th, td {
+    margin: .5em 1em;
+    @media (min-width: $breakpoint-alpha) { 
+      padding: 1em !important; 
+    }
+  }
+  th, td:before {
+    color: #dd5;
+  }
+}
+
+
+
+.container1 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: green;
+}
+
+/* On mouse-over, add a grey background color */
+.container1:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container1 input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container1 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container1 .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+   }
+
+
+.list3 {counter-reset: repas;} /* on initialise et nomme un compteur */
+.list3 span {
+  list-style-type: none;
+  counter-increment: repas; /* on incrémente le compteur à chaque nouveau li */
+  margin-bottom: 10px;
+}
+.list3 span:before {
+  content: counter(repas); /* on affiche le compteur */
+  padding: 0 20px 6px;
+  margin-right: 8px;
+  vertical-align: top;
+  background: #678;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  font-weight: bold;
+  font-size: 0.8em;
+  color: white;   
+}
+
+.class1{
+  color:white;
+  background-color: green;
+}
+.class1:hover{
+   color:white;
+  background-color: blue;
+}
