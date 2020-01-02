@@ -97,6 +97,24 @@ return 0;
 
 
 
+Route::get('/etudiants/exclus/{group}',function($group) {
+    $data = DB::table('etudiants')->join('groups', 'etudiants.gp', '=', 'groups.name')->where([
+    ['groups.prof', '=', $group],
+    ['etudiants.nb_abs','>',2],
+])->orderBy('gp')->pluck('etudiants.name');
+    //return response()->json($data);
+    return $data;
+});
+
+Route::post('/etudiants/exclus/{group}',function($group) {
+    $data = DB::table('etudiants')->join('groups', 'etudiants.gp', '=', 'groups.name')->where([
+    ['groups.prof', '=', $group],
+    ['etudiants.nb_abs','>',2],
+])->orderBy('gp')->pluck('gp');
+    //return response()->json($data);
+    return $data;
+});
+
 
 
 
