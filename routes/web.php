@@ -21,7 +21,13 @@ Route::get('/', function () {
    // return $tabarticles;
 });
 
+Route::get('/saisirAbs', function () {
+if(Auth::check()==false){
+    return redirect('/loginin');
+}
 
+
+});
 
 
 
@@ -39,6 +45,53 @@ Route::post('/profs/numtd/{prof}',function($prof) {
             ->increment('num_td');
     //return response()->json($data);
     return $data;
+});
+
+Route::get('/login/{email}/{password}',function($email,$password){
+
+
+ $data = DB::table('users')->where([
+    ['email', '=', $email],
+    ['password','=',$password],
+])->pluck('id');
+
+
+if(count($data)==0){
+	
+	return "0";
+}
+else
+{
+    $user=new User();
+    $tabl=$data;
+    $user->id=$tabl[0];
+    Auth::login($user);
+	return Auth::user()->id;
+}
+
+
+});
+
+
+Route::get('/getuserid',function() {
+
+	
+if(Auth::check()){
+	return Auth::user()->id;
+}
+else{
+	return 0;
+}
+});
+
+
+Route::get('/deconnecter',function() {
+
+	
+if(Auth::check()){
+	Auth::logout();
+}
+return 0;
 });
 
 
